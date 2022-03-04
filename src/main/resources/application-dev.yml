@@ -1,0 +1,36 @@
+
+codis:
+  pool:
+    config:
+      minIdle: 10
+      maxIdle: 1000
+      maxTotal: 1000
+      maxWaitMillis: 10000
+    host: 127.0.0.1
+#    password: 123456
+    port: 6379
+    timeout: 2000
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com._21cn.ehomesync.entity
+server:
+  port: 9094
+  servlet:
+    context-path: /device
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:13301/vcp_pro?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#    username: camera_user
+#    password: ikULVploMzeeYpma
+
+
+#推送云网rocketmq配置(使用springboot-rocket封装的mq)
+#rocketmq:
+#  name-server: 127.0.0.1:9876
+#  producer:
+#    group: group_vcp_ehome_device_test_update
+#  topic:
+#    device-info: topic_ehome_device_test_update
